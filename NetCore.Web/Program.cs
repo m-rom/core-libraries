@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NetCore.Web.Models;
 
 namespace NetCore.Web
 {
@@ -21,6 +22,11 @@ namespace NetCore.Web
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                })
+                .ConfigureLogging(b =>
+                {
+                    b.AddConsole();
+                    b.SetMinimumLevel(LogLevel.Information);
                 });
     }
 }
