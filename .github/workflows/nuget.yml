@@ -17,3 +17,5 @@ jobs:
         echo test, and deploy your project.
     - name: Publish NuGet
       uses: rohith/publish-nuget@v1.2.0
+      with:
+        project_dir: ./NetCore.Data.Cosmos
