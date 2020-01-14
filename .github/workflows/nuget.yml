@@ -18,4 +18,12 @@ jobs:
     - name: Publish NuGet
       uses: rohith/publish-nuget@v1.2.0
       with:
-        project_dir: ./NetCore.Data.Cosmos
+        project_dir: ./NetCore.Data.Abstractions
+    - name: Publish NuGet
+      uses: rohith/publish-nuget@v1.2.0
+      with:
+        project_dir: ./NetCore.Data
+    - name: Publish NuGet
+      uses: rohith/publish-nuget@v1.2.0
+      with:
+        project_dir: ./NetCore.Data.Azure.Cosmos
